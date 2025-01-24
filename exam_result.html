@@ -1,0 +1,9 @@
+<h2>Exam Result</h2>
+<p>Course: {{ submission.course.title }}</p>
+<p>Score: {{ score }}</p>
+<h3>Selected Answers</h3>
+<ul>
+    {% for choice in submission.choices.all %}
+        <li>{{ choice.text }}</li>
+    {% endfor %}
+</ul>
